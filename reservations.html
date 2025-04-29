@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo-easy-travel.jpg" alt="Easy Travel Logo" width="30" height="30"
+                    class="d-inline-block align-text-top">
+                Easy Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reservations.html">Reservations</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <section class="d-flex justify-content-center align-items-center text-center text-white"
+        style="height: 100vh; background: url('assets/images/beautiful travel.png') no-repeat center center; background-size: cover;">
+        <div>
+            <h1 class="display-4" style="color: red; font-weight: bold;">Welcome to Easy Travel</h1>
+            <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you a great service.
+            </p>
+            <a href="#reservetions" class="btn btn-light btn-lg mt-3">Contact Us</a>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <h2 class="text-center mb-5" style="background-color: purple; color: white; padding: 10px;">Reservations</h2>
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-md-6">
+                <h1 id="Flight" style="color: purple;">Flight</h1>
+                <form action="/submit-travel" method="POST">
+                    <label for="Airport">From:</label><br>
+                    <input type="Airport" id="Airport" name="airport" required><br><br>
+                    <label for="destination">To:</label><br>
+                    <input type="text" id="destination" name="destination" required><br><br>
+                    <label for="traveldate">Travel Date:</label><br>
+                    <input type="date" id="traveldate" name="traveldate" required><br><br>
+                    <label for="returnDate">Return Date:</label><br>
+                    <input type="date" id="returnDate" name="returnDate"><br><br>
+                    <label for="passengers">Number of Passengers:</label><br>
+                    <input type="number" id="passengers" name="passengers" min="1" value="1"><br><br>
+                    <label for="fullnames">Full Names:</label><br>
+                    <input type="text" id="fullnames" name="fullnames" required><br><br>
+                    <label for="special">Special Requests:</label><br>
+                    <textarea id="special" name="special" rows="4" cols="40"></textarea><br><br>
+                    <input type="submit" value="Book Now">
+                </form>
+                <h3 class="mt-4" style="color: purple;">The Perfect Holiday: Beaches and Safaris</h3>
+                <p class="mt-4"></p>
+                    Imagine a holiday that combines the soothing serenity of sandy shores with the thrilling adventure of a safari. Beaches offer a haven of relaxation, where turquoise waters meet golden sands, providing the perfect setting for unwinding under the sun. From tranquil sunsets to invigorating ocean swims, coastal escapes are pure bliss. Safaris, on the other hand, awaken a sense of discovery and excitement. Exploring vast landscapes and encountering majestic wildlife—lions, elephants, and giraffes in their natural habitat—is an unforgettable experience. Together, beaches and safaris create a holiday of contrasts: peaceful moments by the sea and exhilarating adventures in the wild. It's the perfect blend for travelers seeking both relaxation and exploration.
+                </p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-6">
+                <h1 style="color: purple;">Accommodations</h1>
+                <form action="/submit-accommodation" method="POST">
+                    <label for="fullname">Full Name:</label><br>
+                    <input type="text" id="fullname" name="fullname" required><br><br>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="checkin">Check-in Date:</label><br>
+                    <input type="date" id="checkin" name="checkin" required><br><br>
+                    <label for="checkout">Check-out Date:</label><br>
+                    <input type="date" id="checkout" name="checkout" required><br><br>
+                    <label for="roomType">Room Type:</label><br>
+                    <select id="roomType" name="roomType" required>
+                        <option value="">--Select a Room Type--</option>
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="family">Family Room</option>
+                        <option value="suite">Suite</option>
+                    </select><br><br>
+                    <label for="adults">Number of Adults:</label><br>
+                    <input type="number" id="adults" name="adults" min="1" value="1" required><br><br>
+                    <label for="children">Number of Children:</label><br>
+                    <input type="number" id="children" name="children" min="0" value="0"><br><br>
+                    <label for="special">Special Requests:</label><br>
+                    <textarea id="special" name="special" rows="4" cols="40"></textarea><br><br>
+                    <input type="submit" value="Book Now">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <section id="Nature" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Column -->
+                <div class="col-md-6 text-center">
+                    <img src="assets/images/playa.gif" alt="Playa" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
+                    <h2 class="mb-0" style="color: purple;">Explore the World</h2>
+                    <img src="assets/images/national-park.gif" alt="National Park" class="img-fluid" style="max-width: 100%; height: auto;">
+                    <p>
+                        Travel is the gateway to discovering new cultures, breathtaking landscapes,
+                        and hidden treasures. It brings people closer to the world’s wonders,
+                        allowing them to step out of their routines and embrace the joy of exploration.
+                        Whether it’s a relaxing getaway or an adventurous journey,
+                        travel offers unforgettable experiences that inspire growth, connection,
+                        and lasting memories.
+                    </p>
+                </div>
+                <!-- Right Column -->
+                <div class="col-md-6 text-center">
+                    <img src="assets/images/safari.gif" alt="Safari" class="img-fluid mb-4" style="max-width: 100%; height: 300px; width: auto;">
+                    <img src="assets/images/fun-summer.gif" alt="Fun Summer" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                    <img src="assets/images/Jamaica.gif" alt="Jamaica" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                    <img src="assets/images/Vallarta.gif" alt="Vallarta" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                    <img src="assets/images/never.gif" alt="Never" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--moved to html-->
+    <footer>
+        <div>
+            <p class="text-center">© 2025 Easy Travel. All Rights Reserved.</p>
+        </div>
+        <div class="social-icons text-center">
+            <a href="https://facebook.com" target="_blank" title="Facebook" class="mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter" class="mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="mx-2">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com" target="_blank" title="x" class="mx-2">
+                <i class="fab fa-x"></i>
+            </a>
+        </div>
+    </footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
