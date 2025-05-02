@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Travel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -23,7 +23,7 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo-easy-travel.jpg" alt="Easy Travel Logo" width="30" height="30"
                     class="d-inline-block align-text-top">
-                Easy Travel
+                <span style="color: purple;">Easy Travel</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
     <section class="d-flex justify-content-center align-items-center text-center text-white"
         style="height: 100vh; background: url('assets/images/reservation.jpg') no-repeat center center; background-size: cover;">
         <div>
-            <h1 class="display-4" style="color: red; font-weight: bold;">Welcome to Easy Travel</h1>
+            <h1 class="display-4" style="color: red; font-weight: bold;">Welcome to our Reservation Team</h1>
             <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you a great service.
             </p>
             <a href="#reservetions" class="btn btn-light btn-lg mt-3">Contact Us</a>
@@ -66,28 +66,30 @@
             <div class="col-md-6">
                 <h1 id="Flight" style="color: purple;">Flight Request</h1>
                 <form action="/submit-travel" method="POST">
-                    <label for="Airport">From:</label><br>
-                    <input type="Airport" id="Airport" name="airport" required><br><br>
-                    <label for="destination">To:</label><br>
-                    <input type="text" id="destination" name="destination" required><br><br>
+                    <label for="Airport" style="color: purple; font-weight: bold;">From:</label><br>
+                    <input type="Airport" id="Airport" name="airport" required style="border: 2px solid purple;"><br><br>
+                    <label for="destination" style="color: purple; font-weight: bold;">To:</label><br>
+                    <input type="text" id="destination" name="destination" required style="border: 2px solid purple;"><br><br>
                     <label for="traveldate">Travel Date:</label><br>
-                    <input type="date" id="traveldate" name="traveldate" required><br><br>
+                    <input type="date" id="traveldate" name="traveldate" required style="border: 2px solid purple;"><br><br>
                     <label for="returnDate">Return Date:</label><br>
-                    <input type="date" id="returnDate" name="returnDate"><br><br>
-                    <label for="passengers">Number of Adults:</label><br>
-                    <input type="number" id="passengers" name="passengers" min="1" value="1"><br><br>
+                    <input type="date" id="returnDate" name="returnDate"style="border: 2px solid purple;"><br><br>
+                    <label for="passengers">Number of Adults</label><br>
+                    <input type="number" id="passengers" name="passengers" min="1" value="1" style="border: 2px solid purple;"><br><br>
                     <label for="passengers">Number of Children under 11 years old:</label><br>
-                    <input type="number" id="passengers" name="passengers" min="1" value="1"><br><br>
+                    <input type="number" id="passengers" name="passengers" min="1" value="1" style="border: 2px solid purple;"><br><br>
                     <label for="fullnames">Full Names:</label><br>
-                    <input type="text" id="fullnames" name="fullnames" required><br><br>
+                    <input type="text" id="fullnames" name="fullnames" required style="border: 2px solid purple;"><br><br>
                     <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block;">Send Your Request:</label><br>
-                    <textarea id="special" name="special" rows="4" cols="40"></textarea><br><br>
-                    <input type="submit" value="Book Now" style="background-color: purple; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                    <input type="email" id="email" name="email" required style="border: 2px solid purple;"><br><br>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required style="border: 2px solid purple;"><br><br>
+                    <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send Your Request:</label><br>
+                    <textarea id="special" name="special" rows="4" cols="40" style="border: 2px solid purple;"></textarea><br><br>
+                    
                 </form>
                 <h3 class="mt-4" style="color: purple;">The Perfect Holiday: Beaches and Safaris</h3>
-                <p class="mt-4"></p>
+                <p style="color: purple;">
                     Imagine a holiday that combines the soothing serenity of sandy shores with the thrilling adventure of a safari. Beaches offer a haven of relaxation, where turquoise waters meet golden sands, providing the perfect setting for unwinding under the sun. From tranquil sunsets to invigorating ocean swims, coastal escapes are pure bliss. Safaris, on the other hand, awaken a sense of discovery and excitement. Exploring vast landscapes and encountering majestic wildlife—lions, elephants, and giraffes in their natural habitat—is an unforgettable experience. Together, beaches and safaris create a holiday of contrasts: peaceful moments by the sea and exhilarating adventures in the wild. It's the perfect blend for travelers seeking both relaxation and exploration.
                 </p>
             </div>
@@ -97,11 +99,12 @@
                 <h1 style="color: purple;">Accommodation Request</h1>
                 <form action="/submit-accommodation" method="POST">
                     <label for="destination">Destination:</label><br>
-                    <input type="text" id="fullname" name="fullname" required><br><br>
+                    <input type="text" id="destination" name="destination" required style="border: 2px solid purple;"><br><br>
+                    
                     <label for="checkin">Check-in Date:</label><br>
-                    <input type="date" id="checkin" name="checkin" required><br><br>
+                    <input type="date" id="checkin" name="checkin" required style="border: 2px solid purple;"><br><br>
                     <label for="checkout">Check-out Date:</label><br>
-                    <input type="date" id="checkout" name="checkout" required><br><br>
+                    <input type="date" id="checkout" name="checkout" required style="border: 2px solid purple;"><br><br>
                     <label for="roomType">Room Type:</label><br>
                     <select id="roomType" name="roomType" required>
                         <option value="">--Select a Room Type--</option>
@@ -111,17 +114,19 @@
                         <option value="suite">Suite</option>
                     </select><br><br>
                     <label for="adults">Number of Adults:</label><br>
-                    <input type="number" id="adults" name="adults" min="1" value="1" required><br><br>
-                    <label for="children">Number of Children:</label><br>
-                    <input type="number" id="children" name="children" min="0" value="0"><br><br>
+                    <input type="number" id="adults" name="adults" min="1" value="1" required style="border: 2px solid purple;"><br><br>
+                    <label for="children">Number of Children under 11 Years Old:</label><br>
+                    <input type="number" id="children" name="children" min="0" value="0" style="border: 2px solid purple;"><br><br>
                     <label for="fullnames">Full Names:</label><br>
-                    <input type="text" id="fullnames" name="fullnames" required><br><br>
+                    <input type="text" id="fullnames" name="fullnames" required style="border: 2px solid purple;"><br><br>
                     <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-                    <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block;">Send Your Request</label><br>
-                    <textarea id="special" name="special" rows="4" cols="40"></textarea><br><br>
+                    <input type="email" id="email" name="email" required style="border: 2px solid purple;"><br><br>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" required style="border: 2px solid purple;"><br><br>
+                    <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send Your Request:</label><br>
+                    <textarea id="special" name="special" rows="4" cols="40" style="border: 2px solid purple;"></textarea><br><br>
                     
-                    <input type="submit" value="Book Now" style="background-color: purple; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+                    
                 </form>
             </div>
         </div>
@@ -133,40 +138,39 @@
             <div class="row align-items-center">
                 <!-- Left Column -->
                 <div class="col-md-6 text-center">
-                    <img src="assets/images/playa.gif" alt="Playa" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
-                    <h2 class="mb-0" style="color: purple;">Explore the World</h2>
-                    <img src="assets/images/national-park.gif" alt="National Park" class="img-fluid" style="max-width: 100%; height: auto;">
-                    <p>
-                        Travel is the gateway to discovering new cultures, breathtaking landscapes,
-                        and hidden treasures. It brings people closer to the world’s wonders,
-                        allowing them to step out of their routines and embrace the joy of exploration.
-                        Whether it’s a relaxing getaway or an adventurous journey,
-                        travel offers unforgettable experiences that inspire growth, connection,
-                        and lasting memories.
+                    <div style="border: 2px solid purple; padding: 10px; margin-bottom: 20px;"> <!-- Added purple border -->
+                        <p style="color: purple; font-weight: bold;"><strong>Winter Relaxation Away from the City, 7 Nights from 599.00 pp, including flight and hotel</strong></p>
+                        <img src="assets/images/Winter.gif" alt="Playa" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
+                        <p style="color: purple; font-weight: bold;"><strong>Beach Palms and Sea, 7 Nights from 799.00 pp, including flight and hotel</strong></p>
+                        <img src="assets/images/playa.gif" alt="Playa" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
+                        <h2 class="mb-0" style="color: purple;">Explore the World</h2>
+                        <img src="assets/images/national-park.gif" alt="National Park" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                    <p style="color: purple;">
+                        Travel is the gateway to discovering new cultures, breathtaking landscapes, and hidden treasures. It brings people closer to the world’s wonders, allowing them to step out of their routines and embrace the joy of exploration. Whether it’s a relaxing getaway or an adventurous journey, travel offers unforgettable experiences that inspire growth, connection, and lasting memories.
                     </p>
                 </div>
                 <!-- Right Column -->
                 <div class="col-md-6 text-center">
                     <div style="border: 2px solid purple; padding: 10px; margin-bottom: 20px;">
-                        <p style="color: purple; font-weight: bold;">Experience Wild animals in Africa
-                        Hotel and Flight from £999.00 pp</p>
-                    
-                    <p style="color: purple; font-weight: bold;"><strong>Beautifle Cuban Beaches from 799.00 pp</strong></p>
-                    <img src="assets/images/safari.gif" alt="Safari" class="img-fluid mb-4" style="max-width: 100%; height: 300px; width: auto;">
-                    <p style="color: purple; font-weight: bold;">Visit the Beautiful Beaches with Golden Sands in Maldives from £1200.00 pp</p>
-                    <img src="assets/images/galery/fun-summer.gif" alt="Fun Summer" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
-                    <p style="color: purple; font-weight: bold;"><strong>Beautiful Cuban Beaches from 799.00 pp</strong></p>
-                    <img src="assets/images/Jamaica.gif" alt="Jamaica" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
-                    <p style="color: purple; font-weight: bold;">Visit the Beautiful Beaches with Golden Sands in Maldives from £1200.00 pp</p>
-                    <img src="assets/images/Vallarta.gif" alt="Vallarta" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
-                    <p style="color: purple; font-weight: bold;">Relax by the side of this Extraodinary Water Fall from 899.00 pp</p>
-                    <img src="assets/images/never.gif" alt="Never" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                        <p style="color: purple; font-weight: bold;">Experience Wild animals in Africa,
+                            Hotel and Flight, 7 Nights from £999.00 pp, including flight and hotel</p>
+                        <img src="assets/images/safari.gif" alt="Safari" class="img-fluid mb-4" style="max-width: 100%; height: 300px; width: auto;">
+                        <p style="color: purple; font-weight: bold;">Visit the Beautiful Beaches with Golden Sands in Maldives, 7 Nights from £1099.00 pp, including flight and hotel</p>
+                        <img src="assets/images/galery/fun-summer.gif" alt="Fun Summer" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                        <p style="color: purple; font-weight: bold;"><strong>Beautiful Cuban Beaches, 7 Nights from 799.00 pp, including flight and hotel</strong></p>
+                        <img src="assets/images/Jamaica.gif" alt="Jamaica" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                        <p style="color: purple; font-weight: bold;">Visit the Beautiful Beaches with Golden Sands in Maldives, 7 Nights from £1199.00 pp, including flight and hotel</p>
+                        <img src="assets/images/Vallarta.gif" alt="Vallarta" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                        <p style="color: purple; font-weight: bold;">Relax by the side of this Extraordinary Waterfall, 7 Nights from 899.00 pp, including flight and hotel</p>
+                        <img src="assets/images/never.gif" alt="Never" class="img-fluid" style="max-width: 100%; height: 300px; width: auto;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!--moved to html-->
-    <footer class="container-fluid" style="background-color: purple; color: white; padding: 20px 0;">
+    <footer class="container-fluid" style="background-color: purple; color: white; padding: 20px 0; position: relative;">
         <div class="row">
             <div class="col-12 text-center">
                 <div class="social-icons">
@@ -190,8 +194,20 @@
                 <p>© 2025 Easy Travel. All Rights Reserved.</p>
             </div>
         </div>
+        <!-- ABTA Number on the left -->
+        <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
+            </p>
+        </div>
+        <!-- ATOL Number on the right -->
+        <div class="atol-abta" style="position: absolute; bottom: 10px; right: 10px;">
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
+            </p>
+        </div>
     </footer>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo-easy-travel.jpg" alt="Easy Travel Logo" width="30" height="30"
                     class="d-inline-block align-text-top">
-                Easy Travel
+                <span style="color: purple;">Easy Travel</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,8 +51,8 @@
     <section class="d-flex justify-content-center align-items-center text-center text-white"
         style="height: 100vh; background: url('assets/images/customer.gif') no-repeat center center; background-size: cover;">
         <div>
-            <h1 class="display-4" style="color: red; font-weight: bold;">Welcome to Easy Travel</h1>
-            <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you a great service.
+            <h1 class="display-4" style="color: red; font-weight: bold;">Welcome Our Customer Service Team</h1>
+            <p class="lead" style="color: rebeccapurple; font-weight: bold;">Great customer service is about exceeding expectations with empathy and efficiency.
             </p>
             <a href="#contact" class="btn btn-light btn-lg mt-3">Contact Us</a>
         </div>
@@ -68,24 +68,24 @@
                 <form>
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required style="border: 2px solid purple; font-weight: bold;">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required style="border: 2px solid purple; font-weight: bold;">
                     </div>
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject" required style="border: 2px solid purple; font-weight: bold;">
                     </div>
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" style="border: 2px solid purple; font-weight: bold;">
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
                         <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
-                            required></textarea>
+                            required style="border: 2px solid purple; font-weight: bold;"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -96,9 +96,7 @@
     </main>
 
     <!-- Footer -->
-    <footer
-    
-    class="container-fluid" style="background-color: purple; color: white; padding: 20px 0;">
+    <footer class="container-fluid" style="background-color: purple; color: white; padding: 20px 0; position: relative;">
         <div class="row">
             <div class="col-12 text-center">
                 <div class="social-icons">
@@ -121,6 +119,18 @@
             <div class="col-12 text-center">
                 <p>© 2025 Easy Travel. All Rights Reserved.</p>
             </div>
+        </div>
+        <!-- ABTA Number on the left -->
+        <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
+            </p>
+        </div>
+        <!-- ATOL Number on the right -->
+        <div class="atol-abta" style="position: absolute; bottom: 10px; right: 10px;">
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
+            </p>
         </div>
     </footer>
 
