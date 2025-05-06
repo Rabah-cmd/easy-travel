@@ -1,8 +1,5 @@
-
 /* Button Styles */
-.btn {
-    color: #3B2F2F !important;
-}
+
 
 /* Navbar Styles */
 .navbar {
@@ -11,8 +8,19 @@
     z-index: 1000;
 }
 
-       
+.navbar .nav-link {
+    color: #3B2F2F !important; /* Default color for all links */
+}
 
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    font-weight: bold;
+    color: purple !important; /* Same color as "Home" for active and hover states */
+}
+
+.navbar .navbar-nav {
+    margin-left: auto; /* Aligns nav links to the right */
+}
 
 footer {
     position: fixed;
@@ -25,24 +33,6 @@ footer {
     font-size: 14px;
     /* Adjust font size if needed */
 
-}
-
-.navbar .nav-link {
-    color: #3B2F2F !important;
-
-
-    /* Sets the text color of the navbar links */
-
-}
-
-.navbar .nav-link.active {
-    font-weight: bold;
-
-    color: #007bff !important; /* Active link color */
-}
-
-.navbar .navbar-nav {
-    margin-left: auto; /* Aligns nav links to the right */
 }
 
 /* Section Styles */
@@ -224,7 +214,7 @@ footer {
     /* Space for footer content */
 }
 
-.social-icons {
+social-icons {
     position: absolute;
     bottom: 20px;
     /* Distance from the bottom of the footer */
