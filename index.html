@@ -53,11 +53,26 @@
     <!-- Add this after the navbar, before the header section -->
     <div class="container my-4">
         <form>
-            <div class="mb-3">
-                <label for="fromAirport" class="form-label" style="color: purple; font-weight: bold;">From:</label>
-                <select id="fromAirport" class="form-select">
-                    <!-- Options will be populated by JavaScript -->
-                </select>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="fromAirport" class="form-label" style="color: purple; font-weight: bold;">From:</label>
+                    <select id="fromAirport" class="form-select">
+                        <option value="" selected disabled>Select departure airport</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="toAirport" class="form-label" style="color: purple; font-weight: bold;">To:</label>
+                    <select id="toAirport" class="form-select">
+                        <option value="" selected disabled>Select destination airport</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button type="button" class="btn btn-purple" style="background-color: purple; color: white;">Search Flights</button>
+                </div>
             </div>
         </form>
     </div>
@@ -69,7 +84,7 @@
             <h1 class="display-4" style="color: red; font-weight: bold" ;>Welcome to Easy Travel</h1>
             <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you an Excellent service.
             </p>
-            <p class="lead" style="color: rebeccapurple; font-weight: bold;">For Booking, please viste our Reservations page
+            <p class="lead" style="color: rebeccapurple; font-weight: bold;">For Bookings, please viste our Reservations page
             </p>
             <a href="#contact" class="btn btn-light btn-lg mt-3">Contact Us</a>
         </div>
@@ -209,7 +224,10 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
+// Make sure this runs when the document is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM loaded, populating airport lists");
+    
     // List of all London airports
     const londonAirports = [
         { code: "LHR", name: "London Heathrow (LHR)" },
@@ -220,13 +238,49 @@ document.addEventListener('DOMContentLoaded', function() {
         { code: "SEN", name: "London Southend (SEN)" }
     ];
 
+    // Popular international destinations
+    const destinations = [
+        { code: "JFK", name: "New York (JFK)" },
+        { code: "CDG", name: "Paris (CDG)" },
+        { code: "DXB", name: "Dubai (DXB)" },
+        { code: "AMS", name: "Amsterdam (AMS)" },
+        { code: "MAD", name: "Madrid (MAD)" },
+        { code: "FCO", name: "Rome (FCO)" },
+        { code: "SIN", name: "Singapore (SIN)" },
+        { code: "HKG", name: "Hong Kong (HKG)" }
+    ];
+
+    // Get the select elements
     const fromAirportSelect = document.getElementById('fromAirport');
+    const toAirportSelect = document.getElementById('toAirport');
+    
+    // Debug check
+    if (!fromAirportSelect || !toAirportSelect) {
+        console.error("Select elements not found");
+        return;
+    }
+    
+    console.log("Adding London airports to From dropdown");
+    
+    // Populate From dropdown with London airports
     londonAirports.forEach(airport => {
         const option = document.createElement('option');
         option.value = airport.code;
         option.textContent = airport.name;
         fromAirportSelect.appendChild(option);
     });
+    
+    console.log("Adding destinations to To dropdown");
+    
+    // Populate To dropdown with destinations
+    destinations.forEach(airport => {
+        const option = document.createElement('option');
+        option.value = airport.code;
+        option.textContent = airport.name;
+        toAirportSelect.appendChild(option);
+    });
+    
+    console.log("Airport lists populated");
 });
 </script>
 </body>

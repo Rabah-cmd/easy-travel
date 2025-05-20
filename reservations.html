@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Travel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7x1z5l5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -66,10 +66,35 @@
             <div class="col-md-6">
                 <h1 id="Flight" style="color: purple;">Flight Request</h1>
                 <form action="/submit-travel" method="POST">
-                    <label for="Airport" style="color: purple; font-weight: bold;">From:</label><br>
-                    <input type="Airport" id="Airport" name="airport" required style="border: 2px solid purple;"><br><br>
-                    <label for="destination" style="color: purple; font-weight: bold;">To:</label><br>
-                    <input type="text" id="destination" name="destination" required style="border: 2px solid purple;"><br><br>
+                    <label for="Airport" style="color: purple; font-weight: bold; font-size: 14px;">From:</label><br>
+                    <select id="Airport" name="airport" required style="border: 2px solid purple; width: 40%; padding: 6px;">
+                        <option value="" selected disabled>Select departure airport</option>
+                        <option value="LHR">London Heathrow (LHR)</option>
+                        <option value="LGW">London Gatwick (LGW)</option>
+                        <option value="LCY">London City (LCY)</option>
+                        <option value="LTN">London Luton (LTN)</option>
+                        <option value="STN">London Stansted (STN)</option>
+                        <option value="SEN">London Southend (SEN)</option>
+                    </select><br><br>
+                    <label for="destination" style="color: purple; font-weight: bold; font-size: 14px;">To:</label><br>
+                    <select id="destination" name="destination" required style="border: 2px solid purple; width: 40%; padding: 6px;">
+                        <option value="" selected disabled>Select destination airport</option>
+                        <option value="JFK">New York (JFK)</option>
+                        <option value="LAX">Los Angeles (LAX)</option>
+                        <option value="CDG">Paris (CDG)</option>
+                        <option value="FCO">Rome (FCO)</option>
+                        <option value="DXB">Dubai (DXB)</option>
+                        <option value="SIN">Singapore (SIN)</option>
+                        <option value="HKG">Hong Kong (HKG)</option>
+                        <option value="SYD">Sydney (SYD)</option>
+                        <option value="GRU">São Paulo (GRU)</option>
+                        <option value="MEX">Mexico City (MEX)</option>
+                        <option value="NBO">Nairobi (NBO)</option>
+                        <option value="CPT">Cape Town (CPT)</option>
+                        <option value="BKK">Bangkok (BKK)</option>
+                        <option value="DEL">Delhi (DEL)</option>
+                        <option value="MAD">Madrid (MAD)</option>
+                    </select><br><br>
                     <label for="traveldate">Travel Date:</label><br>
                     <input type="date" id="traveldate" name="traveldate" required style="border: 2px solid purple;"><br><br>
                     <label for="returnDate">Return Date:</label><br>
@@ -99,7 +124,24 @@
                 <h1 style="color: purple;">Accommodation Request</h1>
                 <form action="/submit-accommodation" method="POST">
                     <label for="destination">Destination:</label><br>
-                    <input type="text" id="destination" name="destination" required style="border: 2px solid purple;"><br><br>
+                    <select id="destination" name="destination" required style="border: 2px solid purple; width: 40%; padding: 8px;">
+                        <option value="" selected disabled>Select your destination</option>
+                        <option value="london">London, UK</option>
+                        <option value="paris">Paris, France</option>
+                        <option value="rome">Rome, Italy</option>
+                        <option value="newyork">New York, USA</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="bali">Bali, Indonesia</option>
+                        <option value="dubai">Dubai, UAE</option>
+                        <option value="cancun">Cancun, Mexico</option>
+                        <option value="sydney">Sydney, Australia</option>
+                        <option value="capetown">Cape Town, South Africa</option>
+                        <option value="bangkok">Bangkok, Thailand</option>
+                        <option value="barcelona">Barcelona, Spain</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="rio">Rio de Janeiro, Brazil</option>
+                        <option value="santorini">Santorini, Greece</option>
+                    </select><br><br>
                     
                     <label for="checkin">Check-in Date:</label><br>
                     <input type="date" id="checkin" name="checkin" required style="border: 2px solid purple;"><br><br>
