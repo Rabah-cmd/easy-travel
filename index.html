@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +12,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Remove default padding from container-fluid */
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        /* Override bootstrap container class for full width */
+        .full-width {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        /* Add padding to section content */
+        .content-padding {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        /* For mobile responsiveness */
+        @media (max-width: 768px) {
+            .content-padding {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
 </head>
 
 <!--body elements section-->
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<body class="full-width">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top w-100">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo-easy-travel.jpg" alt="Easy Travel Logo" width="30" height="30"
@@ -41,7 +70,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="reservations.html">Reservations</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
@@ -50,8 +78,8 @@
         </div>
     </nav>
 
-    <!-- Add this after the navbar, before the header section -->
-    <div class="container my-4">
+    <!-- Flight search form -->
+    <div class="container">
         <form>
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -70,30 +98,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mb-3">
                     <button type="button" class="btn btn-purple" style="background-color: purple; color: white;">Search Flights</button>
                 </div>
             </div>
         </form>
     </div>
 
-    <!--header section!-->
-    <section class="d-flex justify-content-center align-items-center text-center"
-        style="height: 100vh; background: url('assets/images/beautiful\ travel.png') no-repeat center center; background-size: cover;">
+    <!--header section-->
+    <section class="d-flex justify-content-center align-items-center text-center w-100 m-0"
+        style="height: 70vh; background: url('assets/images/beautiful\ travel.png') no-repeat center center; background-size: cover;">
         <div>
-            <h1 class="display-4" style="color: red; font-weight: bold" ;>Welcome to Easy Travel</h1>
-            <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you an Excellent service.
-            </p>
-            <p class="lead" style="color: rebeccapurple; font-weight: bold;">For Bookings, please viste our Reservations page
-            </p>
+            <h1 class="display-4" style="color: red; font-weight: bold">Welcome to Easy Travel</h1>
+            <p class="lead" style="color: rebeccapurple; font-weight: bold;">We are here to offer you an Excellent service.</p>
+            <p class="lead" style="color: rebeccapurple; font-weight: bold;">For Bookings, please viste our Reservations page</p>
             <a href="#contact" class="btn btn-light btn-lg mt-3">Contact Us</a>
         </div>
     </section>
 
     <!--about us section-->
-    <section id="about" class="py-5">
+    <section id="about" class="py-4 w-100 m-0">
         <div class="container">
-            <h2 class="text-center mb-5"><span style="color: purple;">About Us</span></h2>
+            <h2 class="text-center mb-4"><span style="color: purple;">About Us</span></h2>
             <p style="color: purple;">Easy Travel is dedicated to making your travel dreams a reality. With a passion for exploration and a
             commitment to excellence,
             we provide seamless travel experiences tailored to your unique needs. Whether you're planning a relaxing
@@ -104,63 +130,59 @@
             most breathtaking destinations while ensuring comfort,
             convenience, and affordability. At Easy Travel, we believe that every journey should be as memorable as
             the destination itself. Let us take the stress out of planning
-            so you can focus on creating unforgettable memories. Your adventure begins with us!.</p>
-            <div class="row">
-            <div class="col-md-4 text-center">
+            so you can focus on creating unforgettable memories. Your adventure begins with us!</p>
+        </div>
+    </section>
 
-
-        </section>
-    <!--navbar section-->
-
-    <section>
-
+    <!--services section-->
+    <section class="py-4 w-100 m-0">
         <div class="container">
-            <h2 class="text-center mb-5"><span style="color: purple;">Our Services</span></h2>
-            <div class="row">
-            <div class="col-md-3 text-center">
-                <div class="card p-3" style="min-height: 200px; margin-bottom: 15px;"> <!-- Added margin-bottom -->
-                <h5 class="card-title">Flight Booking</h5>
-                <p class="card-text">Book flights to your favorite destinations with ease.</p>
+            <h2 class="text-center mb-4"><span style="color: purple;">Our Services</span></h2>
+            <div class="row g-3">
+                <div class="col-md-3 mb-3">
+                    <div class="card p-3" style="min-height: 200px;">
+                        <h5 class="card-title">Flight Booking</h5>
+                        <p class="card-text">Book flights to your favorite destinations with ease.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card p-3" style="min-height: 200px; margin-bottom: 15px;"> <!-- Added margin-bottom -->
-                <h5 class="card-title">Accommodation</h5>
-                <p class="card-text">Find and book the best hotels at affordable prices.</p>
+                <div class="col-md-3 mb-3">
+                    <div class="card p-3" style="min-height: 200px;">
+                        <h5 class="card-title">Accommodation</h5>
+                        <p class="card-text">Find and book the best hotels at affordable prices.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card p-3" style="min-height: 200px; margin-bottom: 15px;"> <!-- Added margin-bottom -->
-                <h5 class="card-title">Tour Package</h5>
-                <p class="card-text">Explore our curated tour packages for unforgettable experiences, please
-                    call 08002653595 for a quote</p>
+                <div class="col-md-3 mb-3">
+                    <div class="card p-3" style="min-height: 200px;">
+                        <h5 class="card-title">Tour Package</h5>
+                        <p class="card-text">Explore our curated tour packages for unforgettable experiences, please
+                            call 08002653595 for a quote</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 text-center">
-                <div class="card p-3" style="min-height: 200px; margin-bottom: 15px;"> <!-- Added margin-bottom -->
-                <h5 class="card-title">Travel Insurance</h5>
-                <p class="card-text">Secure your trips with our comprehensive travel insurance plans, please
-                    call 08002653595 for a quote</p>
+                <div class="col-md-3 mb-3">
+                    <div class="card p-3" style="min-height: 200px;">
+                        <h5 class="card-title">Travel Insurance</h5>
+                        <p class="card-text">Secure your trips with our comprehensive travel insurance plans, please
+                            call 08002653595 for a quote</p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
-    <section id="summer-holiday" class="d-flex justify-content-center align-items-center text-center text-white"
-        style="height: 100vh; background: url('assets/images/summer.jpg') no-repeat center center; background-size: cover;">
+    </section>
+    
+    <section id="summer-holiday" class="d-flex justify-content-center align-items-center text-center text-white w-100 m-0"
+        style="height: 60vh; background: url('assets/images/summer.jpg') no-repeat center center; background-size: cover;">
         <div>
             <h1 class="display-4">Summer Holiday</h1>
-
         </div>
     </section>
 
     <!--section testimonial-->
-
-    <section style="margin: 50px 0;"> <!-- Increased margin-top for a small gap -->
+    <section class="py-4 w-100 m-0">
         <div class="container">
-            <h2 class="text-center mb-5"><span style="color: purple;">Testimonials</span></h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-3" style="min-height: 250px; margin-top: 15px;"> <!-- Added margin-top -->
+            <h2 class="text-center mb-4"><span style="color: purple;">Testimonials</span></h2>
+            <div class="row g-3">
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3" style="min-height: 250px;">
                         <div class="card-body">
                             <p class="card-text">"Easy Travel made my vacation stress-free and enjoyable. The booking
                                 process was seamless, and the customer service was exceptional!"</p>
@@ -168,8 +190,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3" style="min-height: 250px; margin-top: 15px;"> <!-- Added margin-top -->
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3" style="min-height: 250px;">
                         <div class="card-body">
                             <p class="card-text">"I loved the tour package options! Everything was well-organized, and I
                                 had the best time exploring new destinations."</p>
@@ -177,8 +199,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3" style="min-height: 250px; margin-top: 15px;"> <!-- Added margin-top -->
+                <div class="col-md-4 mb-3">
+                    <div class="card p-3" style="min-height: 250px;">
                         <div class="card-body">
                             <p class="card-text">"Booking flights and accommodations through Easy Travel was so
                                 convenient. Highly recommend their services!"</p>
@@ -190,99 +212,101 @@
         </div>
     </section>
 
-    <!--footer section!-->
-    <footer class="container-fluid" style="background-color: purple; color: white; padding: 20px 0; position: relative;">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p>© 2025 Easy Travel. All Rights Reserved.</p>
+    <!--footer section-->
+    <footer class="container-fluid m-0 p-0" style="background-color: purple; color: white; position: relative;">
+        <div class="py-4">
+            <div class="row m-0">
+                <div class="col-12 text-center">
+                    <p>© 2025 Easy Travel. All Rights Reserved.</p>
+                </div>
             </div>
-        </div>
-        <div class="social-icons" style="position: absolute; bottom: 10px; right: 10px;">
-            <a href="https://facebook.com" target="_blank" title="Facebook" style="color: white; margin: 0 10px;">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" title="Twitter" style="color: white; margin: 0 10px;">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" title="LinkedIn" style="color: white; margin: 0 10px;">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://x.com" target="_blank" title="X" style="color: white; margin: 0 10px;">
-                <i class="fab fa-x"></i>
-            </a>
-        </div>
-        <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
-            <p style="margin: 0; font-size: 14px;">
-                <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
-            </p>
-            <p style="margin: 0; font-size: 14px;">
-                <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
-            </p>
+            <div class="social-icons" style="position: absolute; bottom: 10px; right: 10px;">
+                <a href="https://facebook.com" target="_blank" title="Facebook" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" title="Twitter" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com" target="_blank" title="X" style="color: white; margin: 0 10px;">
+                    <i class="fab fa-x"></i>
+                </a>
+            </div>
+            <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
+                <p style="margin: 0; font-size: 14px;">
+                    <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
+                </p>
+                <p style="margin: 0; font-size: 14px;">
+                    <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
+                </p>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script>
-// Make sure this runs when the document is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM loaded, populating airport lists");
-    
-    // List of all London airports
-    const londonAirports = [
-        { code: "LHR", name: "London Heathrow (LHR)" },
-        { code: "LGW", name: "London Gatwick (LGW)" },
-        { code: "LCY", name: "London City (LCY)" },
-        { code: "LTN", name: "London Luton (LTN)" },
-        { code: "STN", name: "London Stansted (STN)" },
-        { code: "SEN", name: "London Southend (SEN)" }
-    ];
+    // Make sure this runs when the document is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded, populating airport lists");
+        
+        // List of all London airports
+        const londonAirports = [
+            { code: "LHR", name: "London Heathrow (LHR)" },
+            { code: "LGW", name: "London Gatwick (LGW)" },
+            { code: "LCY", name: "London City (LCY)" },
+            { code: "LTN", name: "London Luton (LTN)" },
+            { code: "STN", name: "London Stansted (STN)" },
+            { code: "SEN", name: "London Southend (SEN)" }
+        ];
 
-    // Popular international destinations
-    const destinations = [
-        { code: "JFK", name: "New York (JFK)" },
-        { code: "CDG", name: "Paris (CDG)" },
-        { code: "DXB", name: "Dubai (DXB)" },
-        { code: "AMS", name: "Amsterdam (AMS)" },
-        { code: "MAD", name: "Madrid (MAD)" },
-        { code: "FCO", name: "Rome (FCO)" },
-        { code: "SIN", name: "Singapore (SIN)" },
-        { code: "HKG", name: "Hong Kong (HKG)" }
-    ];
+        // Popular international destinations
+        const destinations = [
+            { code: "JFK", name: "New York (JFK)" },
+            { code: "CDG", name: "Paris (CDG)" },
+            { code: "DXB", name: "Dubai (DXB)" },
+            { code: "AMS", name: "Amsterdam (AMS)" },
+            { code: "MAD", name: "Madrid (MAD)" },
+            { code: "FCO", name: "Rome (FCO)" },
+            { code: "SIN", name: "Singapore (SIN)" },
+            { code: "HKG", name: "Hong Kong (HKG)" }
+        ];
 
-    // Get the select elements
-    const fromAirportSelect = document.getElementById('fromAirport');
-    const toAirportSelect = document.getElementById('toAirport');
-    
-    // Debug check
-    if (!fromAirportSelect || !toAirportSelect) {
-        console.error("Select elements not found");
-        return;
-    }
-    
-    console.log("Adding London airports to From dropdown");
-    
-    // Populate From dropdown with London airports
-    londonAirports.forEach(airport => {
-        const option = document.createElement('option');
-        option.value = airport.code;
-        option.textContent = airport.name;
-        fromAirportSelect.appendChild(option);
+        // Get the select elements
+        const fromAirportSelect = document.getElementById('fromAirport');
+        const toAirportSelect = document.getElementById('toAirport');
+        
+        // Debug check
+        if (!fromAirportSelect || !toAirportSelect) {
+            console.error("Select elements not found");
+            return;
+        }
+        
+        console.log("Adding London airports to From dropdown");
+        
+        // Populate From dropdown with London airports
+        londonAirports.forEach(airport => {
+            const option = document.createElement('option');
+            option.value = airport.code;
+            option.textContent = airport.name;
+            fromAirportSelect.appendChild(option);
+        });
+        
+        console.log("Adding destinations to To dropdown");
+        
+        // Populate To dropdown with destinations
+        destinations.forEach(airport => {
+            const option = document.createElement('option');
+            option.value = airport.code;
+            option.textContent = airport.name;
+            toAirportSelect.appendChild(option);
+        });
+        
+        console.log("Airport lists populated");
     });
-    
-    console.log("Adding destinations to To dropdown");
-    
-    // Populate To dropdown with destinations
-    destinations.forEach(airport => {
-        const option = document.createElement('option');
-        option.value = airport.code;
-        option.textContent = airport.name;
-        toAirportSelect.appendChild(option);
-    });
-    
-    console.log("Airport lists populated");
-});
-</script>
+    </script>
 </body>
 
 </html>
