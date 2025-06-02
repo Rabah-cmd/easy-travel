@@ -12,43 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        /* Remove default padding from container-fluid */
-        .container-fluid {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        
-        /* Override bootstrap container class for full width */
-        .full-width {
-            width: 100%;
-            max-width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        
-        /* Add padding to section content */
-        .content-padding {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
-        /* For mobile responsiveness */
-        @media (max-width: 768px) {
-            .content-padding {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        }
-    </style>
 </head>
 
 <!--body elements section-->
 
-<body class="full-width">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top w-100">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo-easy-travel.jpg" alt="Easy Travel Logo" width="30" height="30"
@@ -70,6 +39,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="reservations.html">Reservations</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
@@ -79,7 +49,7 @@
     </nav>
 
     <!-- Flight search form -->
-    <div class="container">
+    <div class="container my-3">
         <form>
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -106,7 +76,7 @@
     </div>
 
     <!--header section-->
-    <section class="d-flex justify-content-center align-items-center text-center w-100 m-0"
+    <section class="d-flex justify-content-center align-items-center text-center"
         style="height: 70vh; background: url('assets/images/beautiful\ travel.png') no-repeat center center; background-size: cover;">
         <div>
             <h1 class="display-4" style="color: red; font-weight: bold">Welcome to Easy Travel</h1>
@@ -117,7 +87,7 @@
     </section>
 
     <!--about us section-->
-    <section id="about" class="py-4 w-100 m-0">
+    <section id="about" class="py-4">
         <div class="container">
             <h2 class="text-center mb-4"><span style="color: purple;">About Us</span></h2>
             <p style="color: purple;">Easy Travel is dedicated to making your travel dreams a reality. With a passion for exploration and a
@@ -135,10 +105,10 @@
     </section>
 
     <!--services section-->
-    <section class="py-4 w-100 m-0">
+    <section class="py-4">
         <div class="container">
             <h2 class="text-center mb-4"><span style="color: purple;">Our Services</span></h2>
-            <div class="row g-3">
+            <div class="row">
                 <div class="col-md-3 mb-3">
                     <div class="card p-3" style="min-height: 200px;">
                         <h5 class="card-title">Flight Booking</h5>
@@ -169,7 +139,7 @@
         </div>
     </section>
     
-    <section id="summer-holiday" class="d-flex justify-content-center align-items-center text-center text-white w-100 m-0"
+    <section id="summer-holiday" class="d-flex justify-content-center align-items-center text-center text-white"
         style="height: 60vh; background: url('assets/images/summer.jpg') no-repeat center center; background-size: cover;">
         <div>
             <h1 class="display-4">Summer Holiday</h1>
@@ -177,10 +147,10 @@
     </section>
 
     <!--section testimonial-->
-    <section class="py-4 w-100 m-0">
+    <section class="py-4">
         <div class="container">
             <h2 class="text-center mb-4"><span style="color: purple;">Testimonials</span></h2>
-            <div class="row g-3">
+            <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card p-3" style="min-height: 250px;">
                         <div class="card-body">
@@ -213,35 +183,33 @@
     </section>
 
     <!--footer section-->
-    <footer class="container-fluid m-0 p-0" style="background-color: purple; color: white; position: relative;">
-        <div class="py-4">
-            <div class="row m-0">
-                <div class="col-12 text-center">
-                    <p>© 2025 Easy Travel. All Rights Reserved.</p>
-                </div>
+    <footer class="container-fluid" style="background-color: purple; color: white; padding: 20px 0; position: relative;">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>© 2025 Easy Travel. All Rights Reserved.</p>
             </div>
-            <div class="social-icons" style="position: absolute; bottom: 10px; right: 10px;">
-                <a href="https://facebook.com" target="_blank" title="Facebook" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" title="Twitter" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" title="LinkedIn" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://x.com" target="_blank" title="X" style="color: white; margin: 0 10px;">
-                    <i class="fab fa-x"></i>
-                </a>
-            </div>
-            <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
-                <p style="margin: 0; font-size: 14px;">
-                    <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
-                </p>
-                <p style="margin: 0; font-size: 14px;">
-                    <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
-                </p>
-            </div>
+        </div>
+        <div class="social-icons" style="position: absolute; bottom: 10px; right: 10px;">
+            <a href="https://facebook.com" target="_blank" title="Facebook" style="color: white; margin: 0 10px;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" title="Twitter" style="color: white; margin: 0 10px;">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" title="LinkedIn" style="color: white; margin: 0 10px;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://x.com" target="_blank" title="X" style="color: white; margin: 0 10px;">
+                <i class="fab fa-x"></i>
+            </a>
+        </div>
+        <div class="atol-abta" style="position: absolute; bottom: 10px; left: 10px;">
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-plane" style="margin-right: 5px;"></i> ATOL No: 24536
+            </p>
+            <p style="margin: 0; font-size: 14px;">
+                <i class="fas fa-shield-alt" style="margin-right: 5px;"></i> ABTA No: 56453
+            </p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
