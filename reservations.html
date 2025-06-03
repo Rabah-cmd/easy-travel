@@ -75,17 +75,15 @@
             <div class="container mt-5">
                 <h2 class="text-center mb-5" style="background-color: purple; color: white; padding: 10px;">Reservations
                 </h2>
-                <div class="row">
-                    <!-- Left Column -->
-                    <div class="col-md-6">
-                        <div
-                            style="border: 2px solid purple; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(128,0,128,0.08); margin-bottom: 24px;">
-                            <h1 id="Flight" style="color: purple;">Flight Request</h1>
-                            <form action="/submit-travel" method="POST">
-                                <label for="Airport"
-                                    style="color: purple; font-weight: bold; font-size: 14px;">From:</label><br>
-                                <select id="Airport" name="airport" required
-                                    style="border: 2px solid purple; width: 40%; padding: 6px;">
+                
+                <!-- Flight Request Form - Now horizontal -->
+                <div style="border: 2px solid purple; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(128,0,128,0.08); margin-bottom: 24px;">
+                    <h1 id="Flight" style="color: purple;">Flight Request</h1>
+                    <form action="/submit-travel" method="POST">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="Airport" style="color: purple; font-weight: bold; font-size: 14px;">From:</label><br>
+                                <select id="Airport" name="airport" required style="border: 2px solid purple; width: 100%; padding: 6px;">
                                     <option value="" selected disabled>Select departure airport</option>
                                     <option value="LHR">London Heathrow (LHR)</option>
                                     <option value="LGW">London Gatwick (LGW)</option>
@@ -93,11 +91,12 @@
                                     <option value="LTN">London Luton (LTN)</option>
                                     <option value="STN">London Stansted (STN)</option>
                                     <option value="SEN">London Southend (SEN)</option>
-                                </select><br><br>
-                                <label for="destination"
-                                    style="color: purple; font-weight: bold; font-size: 14px;">To:</label><br>
-                                <select id="destination" name="destination" required
-                                    style="border: 2px solid purple; width: 40%; padding: 6px;">
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <label for="destination" style="color: purple; font-weight: bold; font-size: 14px;">To:</label><br>
+                                <select id="destination" name="destination" required style="border: 2px solid purple; width: 100%; padding: 6px;">
                                     <option value="" selected disabled>Select destination airport</option>
                                     <option value="JFK">New York (JFK)</option>
                                     <option value="LAX">Los Angeles (LAX)</option>
@@ -114,62 +113,78 @@
                                     <option value="BKK">Bangkok (BKK)</option>
                                     <option value="DEL">Delhi (DEL)</option>
                                     <option value="MAD">Madrid (MAD)</option>
-                                </select><br><br>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
                                 <label for="traveldate">Travel Date:</label><br>
-                                <input type="date" id="traveldate" name="traveldate" required
-                                    style="border: 2px solid purple;"><br><br>
+                                <input type="date" id="traveldate" name="traveldate" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-3">
                                 <label for="returnDate">Return Date:</label><br>
-                                <input type="date" id="returnDate" name="returnDate"
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="passengers">Number of Adults</label><br>
-                                <input type="number" id="passengers" name="passengers" min="1" value="1"
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="passengers">Number of Children under 11 years old:</label><br>
-                                <input type="number" id="passengers" name="passengers" min="1" value="1"
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="fullnames">Full Names:</label><br>
-                                <input type="text" id="fullnames" name="fullnames" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="email">Email Address:</label><br>
-                                <input type="email" id="email" name="email" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="phone">Phone Number:</label><br>
-                                <input type="tel" id="phone" name="phone" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="special"
-                                    style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send
-                                    Your Request:</label><br>
-                                <textarea id="special" name="special" rows="4" cols="40"
-                                    style="border: 2px solid purple;"></textarea><br><br>
-                            </form>
-                            <h3 class="mt-4" style="color: purple;">The Perfect Holiday: Beaches and Safaris</h3>
-                            <p style="color: purple;">
-                                Imagine a holiday that combines the soothing serenity of sandy shores with the thrilling
-                                adventure of a safari. Beaches offer a haven of relaxation, where turquoise waters meet
-                                golden
-                                sands, providing the perfect setting for unwinding under the sun. From tranquil sunsets
-                                to
-                                invigorating ocean swims, coastal escapes are pure bliss. Safaris, on the other hand,
-                                awaken a
-                                sense of discovery and excitement. Exploring vast landscapes and encountering majestic
-                                wildlife—lions, elephants, and giraffes in their natural habitat—is an unforgettable
-                                experience.
-                                Together, beaches and safaris create a holiday of contrasts: peaceful moments by the sea
-                                and
-                                exhilarating adventures in the wild. It's the perfect blend for travelers seeking both
-                                relaxation and exploration.
-                            </p>
+                                <input type="date" id="returnDate" name="returnDate" style="border: 2px solid purple; width: 100%;">
+                            </div>
                         </div>
-                    </div>
-                    <!-- Right Column -->
-                    <div class="col-md-6">
-                        <div
-                            style="border: 2px solid purple; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(128,0,128,0.08); margin-bottom: 24px;">
-                            <h1 style="color: purple;">Accommodation Request</h1>
-                            <form action="/submit-accommodation" method="POST">
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <label for="passengers">Number of Adults</label><br>
+                                <input type="number" id="passengers" name="passengers" min="1" value="1" style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <label for="children">Number of Children under 11 years old:</label><br>
+                                <input type="number" id="children" name="children" min="0" value="0" style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="fullnames">Full Names:</label><br>
+                                <input type="text" id="fullnames" name="fullnames" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="email">Email Address:</label><br>
+                                <input type="email" id="email" name="email" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="phone">Phone Number:</label><br>
+                                <input type="tel" id="phone" name="phone" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send Your Request:</label><br>
+                                <textarea id="special" name="special" rows="4" cols="40" style="border: 2px solid purple; width: 100%;"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <h3 class="mt-4" style="color: purple;">The Perfect Holiday: Beaches and Safaris</h3>
+                    <p style="color: purple;">
+                        Imagine a holiday that combines the soothing serenity of sandy shores with the thrilling
+                        adventure of a safari. Beaches offer a haven of relaxation, where turquoise waters meet
+                        golden sands, providing the perfect setting for unwinding under the sun. From tranquil sunsets
+                        to invigorating ocean swims, coastal escapes are pure bliss. Safaris, on the other hand,
+                        awaken a sense of discovery and excitement. Exploring vast landscapes and encountering majestic
+                        wildlife—lions, elephants, and giraffes in their natural habitat—is an unforgettable
+                        experience. Together, beaches and safaris create a holiday of contrasts: peaceful moments by the sea
+                        and exhilarating adventures in the wild. It's the perfect blend for travelers seeking both
+                        relaxation and exploration.
+                    </p>
+                </div>
+                
+                <!-- Accommodation Request Form - Now horizontal -->
+                <div style="border: 2px solid purple; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(128,0,128,0.08); margin-bottom: 24px;">
+                    <h1 style="color: purple;">Accommodation Request</h1>
+                    <form action="/submit-accommodation" method="POST">
+                        <div class="row">
+                            <div class="col-md-4">
                                 <label for="destination">Destination:</label><br>
-                                <select id="destination" name="destination" required
-                                    style="border: 2px solid purple; width: 40%; padding: 8px;">
+                                <select id="destination" name="destination" required style="border: 2px solid purple; width: 100%; padding: 8px;">
                                     <option value="" selected disabled>Select your destination</option>
                                     <option value="london">London, UK</option>
                                     <option value="paris">Paris, France</option>
@@ -186,51 +201,73 @@
                                     <option value="maldives">Maldives</option>
                                     <option value="rio">Rio de Janeiro, Brazil</option>
                                     <option value="santorini">Santorini, Greece</option>
-                                </select><br><br>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-4">
                                 <label for="checkin">Check-in Date:</label><br>
-                                <input type="date" id="checkin" name="checkin" required
-                                    style="border: 2px solid purple;"><br><br>
+                                <input type="date" id="checkin" name="checkin" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-4">
                                 <label for="checkout">Check-out Date:</label><br>
-                                <input type="date" id="checkout" name="checkout" required
-                                    style="border: 2px solid purple;"><br><br>
+                                <input type="date" id="checkout" name="checkout" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-3">
                                 <label for="roomType">Room Type:</label><br>
-                                <select id="roomType" name="roomType" required>
+                                <select id="roomType" name="roomType" required style="border: 2px solid purple; width: 100%;">
                                     <option value="">--Select a Room Type--</option>
                                     <option value="single">Single</option>
                                     <option value="double">Double</option>
                                     <option value="family">Family Room</option>
                                     <option value="suite">Suite</option>
-                                </select><br><br>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
                                 <label for="adults">Number of Adults:</label><br>
-                                <input type="number" id="adults" name="adults" min="1" value="1" required
-                                    style="border: 2px solid purple;"><br><br>
+                                <input type="number" id="adults" name="adults" min="1" value="1" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-6">
                                 <label for="children">Number of Children under 11 Years Old:</label><br>
-                                <input type="number" id="children" name="children" min="0" value="0"
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="fullnames">Full Names:</label><br>
-                                <input type="text" id="fullnames" name="fullnames" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="email">Email Address:</label><br>
-                                <input type="email" id="email" name="email" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="phone">Phone Number:</label><br>
-                                <input type="tel" id="phone" name="phone" required
-                                    style="border: 2px solid purple;"><br><br>
-                                <label for="special"
-                                    style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send
-                                    Your Request:</label><br>
-                                <textarea id="special" name="special" rows="4" cols="40"
-                                    style="border: 2px solid purple;"></textarea><br><br>
-                            </form>
+                                <input type="number" id="children" name="children" min="0" value="0" style="border: 2px solid purple; width: 100%;">
+                            </div>
                         </div>
-                    </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label for="fullnames">Full Names:</label><br>
+                                <input type="text" id="fullnames" name="fullnames" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="email">Email Address:</label><br>
+                                <input type="email" id="email" name="email" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="phone">Phone Number:</label><br>
+                                <input type="tel" id="phone" name="phone" required style="border: 2px solid purple; width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <label for="special" style="background-color: purple; color: white; padding: 10px; display: inline-block; margin-bottom: 10px;">Send Your Request:</label><br>
+                                <textarea id="special" name="special" rows="4" cols="40" style="border: 2px solid purple; width: 100%;"></textarea>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-        <section id="Nature" class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
+                
+                <!-- The rest of your content remains unchanged -->
+                <div class="row">
                     <!-- Left Column -->
                     <div class="col-md-6 text-center">
                         <!-- Winter Relaxation Away from the City card with separate border -->
